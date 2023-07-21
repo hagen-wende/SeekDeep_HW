@@ -1136,11 +1136,11 @@ int SeekDeepUtilsRunner::setupTarAmpAnalysis(
 	startServerCmdFile << "" << std::endl;
 	startServerCmdFile << "if [[ $# -eq 2 ]]; then" << std::endl;
 	startServerCmdFile << "	nohup " << setUp.commands_.masterProgram_
-			<< " popClusteringViewer --bindAddress "192.168.71.69" --verbose --configDir \"$(pwd)/serverConfigs\" --port $1 --name $2 &"
+			<< " popClusteringViewer --bindAddress '192.168.71.69' --verbose --configDir \"$(pwd)/serverConfigs\" --port $1 --name $2 &"
 			<< std::endl;
 	startServerCmdFile << "else" << std::endl;
 	startServerCmdFile << "	nohup " << setUp.commands_.masterProgram_
-			<< " popClusteringViewer --bindAddress "192.168.71.69" --verbose --configDir \"$(pwd)/serverConfigs\" & "
+			<< " popClusteringViewer --bindAddress '192.168.71.69' --verbose --configDir \"$(pwd)/serverConfigs\" & "
 			<< std::endl;
 	startServerCmdFile << "fi" << std::endl;
 	//make file executable
